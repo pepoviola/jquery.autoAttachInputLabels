@@ -9,7 +9,19 @@
 // to the id of the adjacent input. If the adjacent button does not have an id, assign it a unique id so
 // that we can complete the attachment.
 
-(function($,undefined){
+( function( factory ) {
+    // UMD wrapper
+    if ( typeof define === 'function' && define.amd ) {
+        // AMD
+        define( [ 'jquery' ], factory );
+    } else if ( typeof exports !== 'undefined' ) {
+        // Node/CommonJS
+        module.exports = factory( require( 'jquery' ) );
+    } else {
+        // Browser globals
+        factory( jQuery );
+    }
+}(function($,undefined){
 	'$:nomunge'; // Used by YUI compressor.
 	
 	var autoAttachInputLabels_idCounter = 0;
@@ -34,4 +46,4 @@
 		return this;
 	};
 
-})(jQuery);
+} ) );
