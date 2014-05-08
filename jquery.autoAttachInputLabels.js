@@ -21,7 +21,7 @@
         // Browser globals
         factory( jQuery );
     }
-}(function($,undefined){
+}( function( $, undefined ){
 	'$:nomunge'; // Used by YUI compressor.
 	
 	var autoAttachInputLabels_idCounter = 0;
@@ -32,7 +32,7 @@
 			var inputEl = $( this ).prev();
 			var inputId = inputEl.attr( "id" );
 			
-			if( _.isUndefined( inputId ) )
+			if( inputId === 'undefined' )
 			{
 				inputId = "id_assigned_by_auto_attach_input_label_" + autoAttachInputLabels_idCounter;
 				autoAttachInputLabels_idCounter++;
