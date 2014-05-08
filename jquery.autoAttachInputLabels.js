@@ -32,7 +32,7 @@
 			var inputEl = $( this ).prev();
 			var inputId = inputEl.attr( "id" );
 			
-			if( inputId === 'undefined' )
+			if( typeof inputId === 'undefined' )
 			{
 				inputId = "id_assigned_by_auto_attach_input_label_" + autoAttachInputLabels_idCounter;
 				autoAttachInputLabels_idCounter++;
